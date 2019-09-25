@@ -1,5 +1,11 @@
 const express = require( 'express' );
 const app = express();
+const nunjucks=require('nunjucks')
+app.set('view engine', 'html'); 
+app.engine('html', nunjucks.render);
+nunjucks.configure('views', { noCache: true });
+
+const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
 
 
 app.listen(3000, function () {
@@ -13,8 +19,9 @@ app.listen(3000, function () {
   });
 
 app.get('/user', function (req, res) {
-    res.send('HI')
     console.log("hi")
+    res.render( 'index', {title: 'Hall of Fame', people: people} );
+
   })
   
   
@@ -22,4 +29,17 @@ app.get('/user', function (req, res) {
     res.send('POST-Modernism')
     console.log("Post-modernism")
   })
+
+  var locals = {
+    title: 'An Example',
+    people: [
+        { name: 'Gandalf'},
+        { name: 'Frodo' },
+        { name: 'Hermione'}
+    ]
+};
+nunjucks.configure('views', {noCache: true});
+nunjucks.render('index.html', locals, function (err, output) {
+    console.log(output);
+});
 
