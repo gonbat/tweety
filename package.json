@@ -1,0 +1,26 @@
+{
+  "name": "tweety",
+  "version": "1.0.0",
+  "description": "Una aplicacion cool de Twitter",
+  "main": "index.js",
+  "scripts": {
+     "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonbat/tweety-js.git"
+  },
+  "keywords": [
+    "tweety"
+  ],
+  "author": "gon lian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonbat/tweety-js/issues"
+  },
+  "homepage": "https://github.com/gonbat/tweety-js#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
