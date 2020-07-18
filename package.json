@@ -22,7 +22,7 @@
   "homepage": "https://github.com/gonbat/tweety-js#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "morgan": "^1.9.1",
     "nunjucks": "^3.2.0"
   }
